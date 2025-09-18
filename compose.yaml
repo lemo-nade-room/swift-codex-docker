@@ -1,0 +1,16 @@
+services:
+  dev:
+    image: "lemonaderoom/swift-codex:latest"
+    build:
+      context: .
+    tty: true
+    volumes:
+      - "home:/lemo"
+      - ".:/lemo/workspace"
+      - "build:/lemo/workspace/.build"
+      - "${HOME}/.codex:/creaft/.codex"
+      - "${HOME}/.gitconfig:/creaft/.gitconfig"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+volumes:
+  home:
+  build:

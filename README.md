@@ -22,3 +22,12 @@ container run --rm -i -t \
   --memory 16g \
   lemonaderoom/swift-codex bash
 ```
+
+## Push
+
+```shell
+docker build -t swift-codex:latest -f ./Dockerfile .
+docker login
+docker tag swift-codex:latest lemonaderoom/swift-codex:latest
+docker push lemonaderoom/swift-codex:latest
+```
