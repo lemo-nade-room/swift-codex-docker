@@ -8,8 +8,8 @@ services:
       - "home:/lemo"
       - ".:/lemo/workspace"
       - "build:/lemo/workspace/.build"
-      - "${HOME}/.codex:/creaft/.codex"
-      - "${HOME}/.gitconfig:/creaft/.gitconfig"
+      - "${HOME}/.codex:/lemo/.codex"
+      - "${HOME}/.gitconfig:/lemo/.gitconfig"
       - "/var/run/docker.sock:/var/run/docker.sock"
 volumes:
   home:
